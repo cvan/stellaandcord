@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 11px;
+}
+
+html, body {
+  background: #fff;
+  height: 100%;
+}
+
+body {
+  color: rgb(53,196,232);
+  font: 1.5vw/1.5 Source Sans Pro, sans-serif;
+  font-size: calc(1rem + 1.25vw);
+  text-align: center;
+}
+
+h1 {
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: calc(1rem + 1.25vw);
+}
+
+.hidden-text {
+  display: block;
+  text-indent: -9999px;
+}
+
+.std {
+  background: url(../img/stella_and_cord_save_the_date.png) 50% 0 no-repeat;
+  background-size: contain;
+  min-height: 75vh;
+  width: 100%;
+}
+
+main {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5vw;
+}

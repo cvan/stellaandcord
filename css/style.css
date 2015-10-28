@@ -1,0 +1,406 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden-text {
+  display: block;
+  text-indent: -9999px;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: .1s color ease-in, .1s border-color ease-in;
+}
+
+html {
+  font-size: 11px;
+}
+
+html, body {
+  background: #fff;
+  height: 100%;
+}
+
+body {
+  color: #333;
+  font: 1.25rem/1.5 Source Sans Pro, sans-serif;
+  font-size: calc(1rem + 1vw);
+  min-width: 300px;
+}
+
+h1 {
+  color: #fff;
+  font-size: calc(3rem + 1.35vw);
+  font-weight: 200;
+  letter-spacing: 0.4rem;
+  line-height: 1;
+  margin-bottom: calc(1rem + 1vw);
+  text-transform: uppercase;
+}
+
+h2,
+h3.heading--big {
+  font-size: calc(1.5rem + 2.5vw);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.4rem;
+  margin-bottom: calc(0.75rem + 0.5vw);
+  text-transform: uppercase;
+}
+
+h3,
+h2.heading--small {
+  font-size: calc(1.25rem + 1.75vw);
+  font-family: Source Sans Pro, sans-serif;
+  font-weight: 200;
+  line-height: 1.3;
+  letter-spacing: 0.5rem;
+  margin-bottom: calc(0.5rem + 0.5vw);
+  margin-top: 3rem;
+  text-transform: uppercase;
+}
+
+h2.heading--small {
+  color: #666;
+  font-size: calc(1rem + 0.75vw);
+}
+
+h2.heading--small:first-child,
+h2.heading--small + h3 {
+  margin-top: 0;
+}
+
+.std {
+  background: url(../img/stella_and_cord_save_the_date.png) 50% 0 no-repeat;
+  background-size: contain;
+  min-height: 75vh;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--center {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.section {
+  padding: 2.5vw 5vw;
+}
+
+.section--thin {
+  padding: 1.5vw 5vw;
+}
+
+.section--main {
+  background-color: rgb(53,196,232);
+}
+
+.section--rsvp {
+  background: #f1f1f1;
+}
+
+.section--registry {
+  background: #fff6ee;
+}
+
+.section--accommodations {
+  background: #fff;
+}
+
+.section--gallery {
+  background: #dbf0f7;
+}
+
+.section--footer {
+  background: #333;
+}
+
+.section--footer a {
+  margin: 0 .5ex;
+}
+
+.section--wedding-details {
+  background: rgb(225,39,98);
+  line-height: 1.3;
+}
+
+.section--center {
+  text-align: center;
+}
+
+.section__wrap {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 3rem;
+}
+
+.section--gallery__wrap {
+  max-width: 100%;
+}
+
+.rsvp__disclaimer {
+  color: #999;
+  font-style: italic;
+}
+
+.copy {
+  font-weight: 300;
+}
+
+.copy address {
+  font-style: normal;
+}
+
+.copy p {
+  font-size: 1.5rem;
+}
+
+.copy--big p,
+p.copy--big {
+  font-size: 2rem;
+  font-size: calc(2rem + 1.5vw);
+  line-height: 1.2;
+}
+
+.copy p + p {
+  margin-top: 2rem;
+}
+
+.copy p + address {
+  margin-top: 1rem;
+}
+
+.copy--bright {
+  color: rgba(255,255,255,.85);
+}
+
+.copy--bright h2,
+.copy--bright h3 {
+  color: #fff;
+}
+
+.copy a,
+.copy strong {
+  font-weight: 500;
+}
+
+.copy a {
+  border-bottom: 1px solid rgba(50,100,153,.85);
+  color: rgb(50,100,153);
+}
+
+.copy a:hover {
+  border-bottom: 1px solid #036;
+  color: #036;
+}
+
+a.link--borderless {
+  border: 0;
+}
+
+a.link--color-inherit {
+  color: inherit;
+}
+
+a.link--font-weight-inherit {
+  font-weight: inherit;
+}
+
+.copy--bright a {
+  border-bottom: 1px solid rgba(180,220,255,.85);
+  color: rgba(180,220,255,.85);
+}
+
+.copy--bright a:hover {
+  border-bottom-color: #eddfff;
+  color: #eddfff;
+}
+
+.copy--faint a {
+  color: #cef;
+}
+
+.emoji:before {
+  margin: 0 .5ex;
+}
+
+.emoji:before {
+  font-weight: normal;
+}
+
+.emoji--hot {
+  color: orange;
+}
+
+.emoji--hot:before {
+  content: "☀️";
+}
+
+.emoji--groovy {
+  color: #333;
+}
+
+.emoji--groovy:before {
+  content: "🎤";
+}
+
+.btn {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 1.5rem 2rem;
+  outline: none;
+  padding: 1.5rem 6rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: all .2s;
+}
+
+.btn:after {
+  content: "";
+  position: absolute;
+  transition: all .2s;
+  z-index: -1;
+}
+
+.btn--rsvp {
+  background: #82bf56;
+  border-radius: 40px;
+  box-shadow: 0 6px #598b35;
+  transition: none;
+}
+
+.btn--rsvp:hover {
+  box-shadow: 0 4px #598b35;
+  top: 2px;
+}
+
+.btn--rsvp:active {
+  box-shadow: none;
+  top: 6px;
+}
+
+a.btn,
+a.btn:hover {
+  border: 0;
+  color: #fff;
+}
+
+img {
+  display: block;
+}
+
+.img--honeyfund {
+  margin: 0 auto;
+  max-width: 350px;
+  opacity: .6;
+  transition: .1s opacity cubic-bezier(.4,0,1,1);
+  width: 100%;
+}
+
+.img--honeyfund:hover {
+  opacity: 1;
+}
+
+.icon:before {
+  background-repeat: no-repeat;
+  content: "";
+  display: inline-block;
+  height: 30px;
+  vertical-align: middle;
+  width: 30px;
+}
+
+.icon--instagram:before {
+  background-image: url(../img/instagram_logo.svg);
+  opacity: 0.5;
+}
+
+.flex--grid {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gallery__item {
+  display: flex;
+  flex: 0 1 25%;
+  padding: 3vw;
+}
+
+.gallery__img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: .5rem;
+  display: block;
+  background-color: red;
+  height: 200px;
+  width: 100%;
+}
+
+.gallery__img {
+  opacity: 0.85;
+}
+
+.gallery__img:hover {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  h2.heading--small {
+    font-weight: 400;
+  }
+
+  h2,
+  h3.heading--big {
+    font-size: calc(1.25rem + 1.75vw);
+  }
+
+  p br {
+    display: none;
+  }
+}
+
+@media (max-width: 1099px) {
+  .gallery__item {
+    flex-basis: 33.3333%;
+  }
+}
+
+@media (max-width: 899px) {
+  .gallery__item {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 599px) {
+  .gallery__item {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .gallery__item {
+    flex-basis: 20%;
+  }
+}
