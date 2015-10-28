@@ -110,6 +110,10 @@ h2.heading--small + h3 {
   background: #333;
 }
 
+.section--footer a {
+  margin: 0 .5ex;
+}
+
 .section--wedding-details {
   background: rgb(225,39,98);
   line-height: 1.3;
