@@ -102,8 +102,12 @@ h2.heading--small + h3 {
   background: #f1f1f1;
 }
 
-.section--accomodations {
+.section--registry {
   background: #fff6ee;
+}
+
+.section--accommodations {
+  background: #fff;
 }
 
 .section--footer {
