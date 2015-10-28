@@ -9,6 +9,11 @@
   text-indent: -9999px;
 }
 
+ol,
+ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
   transition: .1s color ease-in, .1s border-color ease-in;
@@ -110,6 +115,10 @@ h2.heading--small + h3 {
   background: #fff;
 }
 
+.section--gallery {
+  background: #dbf0f7;
+}
+
 .section--footer {
   background: #333;
 }
@@ -131,6 +140,10 @@ h2.heading--small + h3 {
   margin: 0 auto;
   max-width: 600px;
   padding: 3rem;
+}
+
+.section--gallery__wrap {
+  max-width: 100%;
 }
 
 .rsvp__disclaimer {
@@ -317,4 +330,33 @@ img {
 .icon--instagram:before {
   background-image: url(../img/instagram_logo.svg);
   opacity: 0.5;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gallery__item {
+  padding: 3rem;
+}
+
+.gallery__img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: .5rem;
+  display: block;
+  height: 200px;
+  width: 200px;
+}
+
+.gallery__img {
+  opacity: 0.85;
+}
+
+.gallery__img:hover {
+  opacity: 1;
 }
