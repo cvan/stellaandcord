@@ -21,7 +21,7 @@
   "scripts": {
     "build": "mkdir -p build/css/ && postcss --use autoprefixer css/style.css -d build/css/ --browsers 'last 10 versions' --map --no-cascade",
     "publish": "npm run ghpages",
-    "preghpages": "rm -rf prod && mkdir -p prod && cp -r {.nojekyll,css,img,index.html,js} prod/. 2>/dev/null || : && cp -r build/ prod/.",
+    "preghpages": "npm run build && rm -rf prod && mkdir -p prod && cp -r {.nojekyll,css,img,index.html,js} prod/. 2>/dev/null || : && cp -r build/ prod/.",
     "ghpages": "node ./scripts/gh-pages",
     "gh-pages": "npm run ghpages"
   }
