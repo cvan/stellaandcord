@@ -35,13 +35,15 @@ body {
   min-width: 300px;
 }
 
-h1 {
+.wordmark {
+  border: 4px solid #fff;
   color: #fff;
   font-size: calc(3rem + 1.35vw);
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 0.4rem;
   line-height: 1;
   margin-bottom: calc(1rem + 1vw);
+  padding: 0.5rem 1.5rem;
   text-transform: uppercase;
 }
 
