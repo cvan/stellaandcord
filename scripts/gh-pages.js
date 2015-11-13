@@ -24,7 +24,7 @@ var ghpages = require('gh-pages');
 var path = require('path');
 
 var settings = {
-  directory: 'prod',
+  directory: '_prod',
   repo: {
     username: 'cvan',
     name: 'stellaandcord'
@@ -54,8 +54,16 @@ settings.repo.ghPagesUrl = 'https://' + settings.repo.username +
 
 console.log('Publishing to', settings.repo.url);
 
-// Wipe out the checkout from scratch every time in case we change repos.
-ghpages.clean();
+function getCacheDir (repoUsername, repoName) {
+  repoUsername = (repoUsername || '').toLowerCase().trim();
+  repoName = (repoName || '').toLowerCase().trim();
+  var pathAbsolute = path.resolve(
+    __dirname,
+    '..',
+    '.cache', 'gh-pages', repoUsername, repoName
+  );
+  return path.relative(process.cwd(), pathAbsolute);
+}
 
 // Publish to GitHub Pages from `prod/` directory.
 ghpages.publish(path.join(process.cwd(), settings.directory), {
