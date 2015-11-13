@@ -24,6 +24,7 @@
     "prod": "npm run build && rm -rf _prod/ && mkdir -p _prod/ && cp -r {.nojekyll,assets,CNAME,index.html} _prod/. 2>/dev/null || : && cp -r _build/ _prod/.",
     "preghpages": "npm run prod",
     "ghpages": "node ./scripts/gh-pages",
-    "gh-pages": "npm run ghpages"
+    "gh-pages": "npm run ghpages",
+    "deploy": "npm run ghpages"
   }
 }
