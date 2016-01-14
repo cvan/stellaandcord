@@ -134,6 +134,10 @@ h4 {
   background: #fff;
 }
 
+.section--story {
+  background: #fceaff;
+}
+
 .section--team {
   background: #f0f7db;
 }
@@ -165,7 +169,7 @@ h4 {
 
 .section__wrap {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 700px;
   padding: 3rem;
 }
 
@@ -361,6 +365,49 @@ img {
   opacity: 0.5;
 }
 
+.section__wrap--story {
+  position: relative;
+}
+
+.section__wrap--story:before {
+  color: #ccc;
+  content: "❤";
+  font-size: 3.5rem;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  top: 55%;
+  transition: all 1s ease-in-out;
+  width: 100%;
+}
+
+.section__wrap--story.animated:before {
+  color: #800;
+  opacity: 1;
+}
+
+.story__take {
+  transition: all 1s ease-in-out;
+  position: relative;
+}
+
+.story__take--stella {
+  left: -100px;
+}
+
+.story__take--cord {
+  right: -100px;
+}
+
+.story__take--stella.animated {
+  left: 0;
+}
+
+.story__take--cord.animated {
+  right: 0;
+}
+
 .flex--grid {
   flex-direction: row;
   flex-wrap: wrap;
@@ -391,7 +438,7 @@ img {
   opacity: 1;
 }
 
-.teams__team {
+.flex--split {
   padding: 0 3vw;
 }
 
@@ -422,6 +469,12 @@ img {
   }
 }
 
+@media (max-width: 1199px) {
+  .section__wrap--story:before {
+    display: none;
+  }
+}
+
 @media (max-width: 1099px) {
   .gallery__item {
     flex-basis: 33.3333%;
@@ -429,16 +482,13 @@ img {
 }
 
 @media (max-width: 899px) {
-  .teams__team {
+  .flex--split {
     padding: 0;
+    width: 100%;
   }
 
   .flex--split-parent {
     display: block;
-  }
-
-  .flex--split {
-    width: 100%;
   }
 
   .person__item {
