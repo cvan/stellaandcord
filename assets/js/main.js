@@ -85,13 +85,12 @@ function closestSection () {
 
 var debouncedScroll = new Debounce(function () {
   var heading = closestSection();
-  if (heading.id === 'story') {
+  if (heading && heading.id === 'story') {
     $$('.story__take').forEach(function (storyTake) {
       storyTake.classList.add('animated');
     });
     $('.section__wrap--story').classList.add('animated');
   }
-  console.log('closest', heading.id);
 }, 25);
 
 })();
