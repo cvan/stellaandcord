@@ -79,6 +79,14 @@ h2.heading--small + h3 {
   margin-top: 0;
 }
 
+h4 {
+  font-size: calc(1.15rem + .75vw);
+}
+
+.copy .person__title {
+  font-size: calc(0.95rem + .65vw);
+}
+
 .std {
   background: url(../img/stella_and_cord_save_the_date.png) 50% 0 no-repeat;
   background-size: contain;
@@ -379,8 +387,16 @@ img {
   padding: 0 3vw;
 }
 
+.person__img {
+  border-radius: 50%;
+  display: block;
+  margin: 1.5rem auto;
+  max-height: 15vw;
+  max-width: 15vw;
+}
+
 .person__item + .person__item {
-  padding-top: 2rem;
+  padding-top: 4rem;
 }
 
 @media (max-width: 600px) {
@@ -415,6 +431,16 @@ img {
 
   .flex--split {
     width: 100%;
+  }
+
+  .person__item {
+    /* To override `min-height` set by JS. */
+    min-height: auto !important;
+  }
+
+  .person__img {
+    max-height: 25vw;
+    max-width: 25vw;
   }
 
   .gallery__item {
