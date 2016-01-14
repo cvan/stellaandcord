@@ -14,6 +14,25 @@ function $$ (selector, parent) {
   return toArray(parent.querySelectorAll(selector));
 }
 
+function Debounce(func, ms) {
+  this.timeout = null;
+  this.func = func;
+  this.ms = ms;
+}
+
+Debounce.prototype.start = function () {
+  this.timeout = window.setTimeout(this.func, this.ms);
+};
+
+Debounce.prototype.reset = function () {
+  this.abort();
+  this.start();
+};
+
+Debounce.prototype.abort = function () {
+  window.clearTimeout(this.timeout);
+};
+
 function equalisePersonItems () {
   // It would be too much hassle and would result in unsemantic markup
   // if we split each person in a column using flexbox. So instead we
@@ -40,5 +59,39 @@ function equalisePersonItems () {
 
 window.addEventListener('load', equalisePersonItems);
 window.addEventListener('resize', equalisePersonItems);
+
+window.addEventListener('scroll', function () {
+  debouncedScroll.reset();
+});
+
+var sections = $$('section[id]').map(function (el) {
+  return {
+    top: el.offsetTop,
+    id: el.name || el.id
+  };
+});
+
+function closestSection () {
+  var section;
+  var top = window.scrollY;
+  var i = sections.length;
+  while (i--) {
+    section = sections[i];
+    if (top >= section.top - document.documentElement.offsetHeight + 200) {
+      return section;
+    }
+  }
+}
+
+var debouncedScroll = new Debounce(function () {
+  var heading = closestSection();
+  if (heading.id === 'story') {
+    $$('.story__take').forEach(function (storyTake) {
+      storyTake.classList.add('animated');
+    });
+    $('.section__wrap--story').classList.add('animated');
+  }
+  console.log('closest', heading.id);
+}, 25);
 
 })();
