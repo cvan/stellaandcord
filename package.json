@@ -3,10 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "description": "Stella & Cord's wedding site",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cvan/stellaandcord.git"
-  },
+  "repository": "cvan/stellaandcord",
   "author": "Chris 'cvan' Van",
   "license": "MIT",
   "bugs": {
@@ -16,9 +13,12 @@
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "gh-pages": "^0.4.0",
+    "http-server": "^0.8.5",
     "postcss-cli": "^2.3.2"
   },
   "scripts": {
+    "start": "npm run dev",
+    "dev": "http-server -c-1",
     "build": "mkdir -p _build/assets/css/ && postcss --use autoprefixer assets/css/style.css -d _build/assets/css/ --browsers 'last 10 versions' --map --no-cascade",
     "publish": "npm run ghpages",
     "prod": "npm run build && rm -rf _prod/ && mkdir -p _prod/ && cp -r {.nojekyll,assets,CNAME,index.html} _prod/. 2>/dev/null || : && cp -r _build/ _prod/.",
