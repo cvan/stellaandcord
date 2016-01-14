@@ -79,6 +79,14 @@ h2.heading--small + h3 {
   margin-top: 0;
 }
 
+h4 {
+  font-size: calc(1.15rem + .75vw);
+}
+
+.copy .person__title {
+  font-size: calc(0.95rem + .65vw);
+}
+
 .std {
   background: url(../img/stella_and_cord_save_the_date.png) 50% 0 no-repeat;
   background-size: contain;
@@ -88,6 +96,10 @@ h2.heading--small + h3 {
 
 .flex {
   display: flex;
+}
+
+.flex--split {
+  width: 50%;
 }
 
 .flex--center {
@@ -122,6 +134,10 @@ h2.heading--small + h3 {
   background: #fff;
 }
 
+.section--team {
+  background: #f0f7db;
+}
+
 .section--gallery {
   background: #dbf0f7;
 }
@@ -139,7 +155,7 @@ h2.heading--small + h3 {
   line-height: 1.3;
 }
 
-.section--center {
+.copy--center {
   text-align: center;
 }
 
@@ -149,7 +165,7 @@ h2.heading--small + h3 {
   padding: 3rem;
 }
 
-.section--gallery__wrap {
+.section__wrap--max {
   max-width: 100%;
 }
 
@@ -367,6 +383,22 @@ img {
   opacity: 1;
 }
 
+.teams__team {
+  padding: 0 3vw;
+}
+
+.person__img {
+  border-radius: 50%;
+  display: block;
+  margin: 1.5rem auto;
+  max-height: 15vw;
+  max-width: 15vw;
+}
+
+.person__item + .person__item {
+  padding-top: 4rem;
+}
+
 @media (max-width: 600px) {
   h2.heading--small {
     font-weight: 400;
@@ -389,6 +421,28 @@ img {
 }
 
 @media (max-width: 899px) {
+  .teams__team {
+    padding: 0;
+  }
+
+  .flex--split-parent {
+    display: block;
+  }
+
+  .flex--split {
+    width: 100%;
+  }
+
+  .person__item {
+    /* To override `min-height` set by JS. */
+    min-height: auto !important;
+  }
+
+  .person__img {
+    max-height: 25vw;
+    max-width: 25vw;
+  }
+
   .gallery__item {
     flex-basis: 50%;
   }
