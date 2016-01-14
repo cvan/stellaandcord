@@ -90,6 +90,10 @@ h2.heading--small + h3 {
   display: flex;
 }
 
+.flex--split {
+  width: 50%;
+}
+
 .flex--center {
   align-items: center;
   display: flex;
@@ -371,6 +375,14 @@ img {
   opacity: 1;
 }
 
+.teams__team {
+  padding: 0 3vw;
+}
+
+.person__item + .person__item {
+  padding-top: 2rem;
+}
+
 @media (max-width: 600px) {
   h2.heading--small {
     font-weight: 400;
@@ -393,6 +405,18 @@ img {
 }
 
 @media (max-width: 899px) {
+  .teams__team {
+    padding: 0;
+  }
+
+  .flex--split-parent {
+    display: block;
+  }
+
+  .flex--split {
+    width: 100%;
+  }
+
   .gallery__item {
     flex-basis: 50%;
   }
