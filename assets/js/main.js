@@ -38,8 +38,7 @@ function equalisePersonItems () {
   });
 }
 
-equalisePersonItems();
-
+window.addEventListener('load', equalisePersonItems);
 window.addEventListener('resize', equalisePersonItems);
 
 })();
