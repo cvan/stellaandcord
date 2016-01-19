@@ -38,7 +38,7 @@ body {
 .wordmark {
   border: 4px solid #fff;
   color: #fff;
-  font-size: calc(3rem + 1.35vw);
+  font-size: calc(2.85rem + 1.35vw);
   font-weight: 400;
   letter-spacing: 0.4rem;
   line-height: 1;
@@ -511,6 +511,10 @@ img {
 @media (max-width: 599px) {
   .gallery__item {
     flex-basis: 100%;
+  }
+
+  .wordmark {
+    width: 100%;
   }
 }
 
